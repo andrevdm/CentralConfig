@@ -10,7 +10,7 @@ namespace CentralConfig
     /// </summary>
     public class ConfigManagerCore
     {
-        private readonly NetTpAppSettings m_appSettings;
+        private readonly ConfigAppSettings m_appSettings;
         private readonly IEnvironment m_environment;
         private readonly IConfigPersistor m_persistor;
         private readonly IVBinAssemblyResolver m_assemblyResolver;
@@ -26,10 +26,10 @@ namespace CentralConfig
             m_persistor = defaultPersistor ?? ObjectFactory.GetInstance<IConfigPersistor>();
             m_assemblyResolver = ObjectFactory.GetInstance<IVBinAssemblyResolver>();
 
-            m_appSettings = new NetTpAppSettings( this );
+            m_appSettings = new ConfigAppSettings( this );
         }
 
-        public NetTpAppSettings AppSettings
+        public ConfigAppSettings AppSettings
         {
             get { return m_appSettings; }
         }
@@ -87,11 +87,11 @@ namespace CentralConfig
             return m_persistor.ReadAppSetting( key );
         }
 
-        public class NetTpAppSettings
+        public class ConfigAppSettings
         {
             private readonly ConfigManagerCore m_config;
 
-            public NetTpAppSettings( ConfigManagerCore config )
+            public ConfigAppSettings( ConfigManagerCore config )
             {
                 if( config == null )
                 {

@@ -24,8 +24,8 @@ namespace CentralConfig
     ///     key="test" value="!$1!_defaultValue"
     ///   Value for version 2 on svr1
     ///     key="!svr1!$2!_test" value="svr1Value"
-    ///   Default for all versions on NetTpdev1
-    ///     key="!NetTpdev1!_test" value="NetTpdev1Value"
+    ///   Default for all versions on dev1
+    ///     key="!dev1!_test" value="dev1Value"
     /// 
     /// The machine name is ready from the IEnvironment implementor which by default will read from Environment.MachineName
     /// </remarks>

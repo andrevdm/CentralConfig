@@ -3,7 +3,7 @@
     /// <summary>
     /// Replacement for System.ConfigurationManager to enable centralised configuration
     /// Can load settings from MongoDB and have machine specific configs
-    /// NetTpConfigManager is the static helper, the NetTpConfigManagerCore implements the actual functionality
+    /// ConfigManager is the static helper, the ConfigManagerCore implements the actual functionality
     /// </summary>
     public static class ConfigManager
     {
@@ -14,7 +14,7 @@
             g_settings = new ConfigManagerCore();
         }
 
-        public static ConfigManagerCore.NetTpAppSettings AppSettings
+        public static ConfigManagerCore.ConfigAppSettings AppSettings
         {
             get { return g_settings.AppSettings; }
         }
