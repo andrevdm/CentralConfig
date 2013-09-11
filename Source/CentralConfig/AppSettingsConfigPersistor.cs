@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace Avdm.Config
+namespace CentralConfig
 {
     /// <summary>
     /// Reads config settings from the application's config file

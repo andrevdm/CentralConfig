@@ -1,9 +1,8 @@
-﻿using Avdm.Core;
-using Avdm.Core.Di;
-using Avdm.Deploy.Sbin;
+﻿using System;
 using StructureMap;
+using VBin;
 
-namespace Avdm.Config
+namespace CentralConfig
 {
     /// <summary>
     /// Replacement for System.ConfigurationManager to enable centralised configuration
@@ -14,7 +13,7 @@ namespace Avdm.Config
         private readonly NetTpAppSettings m_appSettings;
         private readonly IEnvironment m_environment;
         private readonly IConfigPersistor m_persistor;
-        private readonly ISbinAssemblyResolver m_assemblyResolver;
+        private readonly IVBinAssemblyResolver m_assemblyResolver;
 
         public ConfigManagerCore()
             : this( null )
@@ -25,7 +24,7 @@ namespace Avdm.Config
         {
             m_environment = ObjectFactory.GetInstance<IEnvironment>();
             m_persistor = defaultPersistor ?? ObjectFactory.GetInstance<IConfigPersistor>();
-            m_assemblyResolver = ObjectFactory.GetInstance<ISbinAssemblyResolver>();
+            m_assemblyResolver = ObjectFactory.GetInstance<IVBinAssemblyResolver>();
 
             m_appSettings = new NetTpAppSettings( this );
         }
@@ -94,7 +93,10 @@ namespace Avdm.Config
 
             public NetTpAppSettings( ConfigManagerCore config )
             {
-                Preconditions.CheckNotNull( config, "config" );
+                if( config == null )
+                {
+                    throw new ArgumentNullException( "config" );
+                }
 
                 m_config = config;
             }

@@ -6,11 +6,15 @@
         <title>$title$</title>
         <authors>Andre Van Der Merwe</authors>
         <owners>Andre Van Der Merwe</owners>
-        <projectUrl>https://github.com/andrevdm/config</projectUrl>
+        <projectUrl>https://github.com/andrevdm/CentralConfig</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Replacement for System.ConfigurationManager to enable centralised configuration</description>
         <releaseNotes>Initial version</releaseNotes>
         <copyright>Copyright 2013</copyright>
-        <tags>config</tags>
+        <tags>central config</tags>
     </metadata>
+
+    <files>
+        <file src="bin\Debug\CentralConfig.pdb" target="lib\net40" /> 
+    </files>      
 </package>

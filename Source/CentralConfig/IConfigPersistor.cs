@@ -1,4 +1,4 @@
-﻿namespace Avdm.Config
+﻿namespace CentralConfig
 {
     public interface IConfigPersistor
     {

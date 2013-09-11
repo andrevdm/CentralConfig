@@ -4,7 +4,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.XPath;
 
-namespace Avdm.Config
+namespace CentralConfig
 {
     /// <summary>
     /// Configuration section handler that deserializes configuration settings to an object.

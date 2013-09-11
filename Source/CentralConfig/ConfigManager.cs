@@ -1,4 +1,4 @@
-﻿namespace Avdm.Config
+﻿namespace CentralConfig
 {
     /// <summary>
     /// Replacement for System.ConfigurationManager to enable centralised configuration
