@@ -52,14 +52,17 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="vbin">
-      <HintPath>..\packages\vbin.1.1.0.36964\lib\net40\vbin.exe</HintPath>
+    <Reference Include="vbin, Version=1.1.2.31568, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\vbin.1.1.2.31568\lib\net40\vbin.exe</HintPath>
     </Reference>
-    <Reference Include="VBin.Manager">
-      <HintPath>..\packages\vbin.1.1.0.36964\lib\net40\VBin.Manager.dll</HintPath>
+    <Reference Include="VBin.Manager, Version=1.1.2.31569, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\vbin.1.1.2.31568\lib\net40\VBin.Manager.dll</HintPath>
     </Reference>
-    <Reference Include="VBin.Uploader">
-      <HintPath>..\packages\vbin.1.1.0.36964\lib\net40\VBin.Uploader.exe</HintPath>
+    <Reference Include="VBin.Uploader, Version=1.1.2.31569, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\vbin.1.1.2.31568\lib\net40\VBin.Uploader.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

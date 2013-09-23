@@ -1,6 +1,7 @@
 ﻿using System;
 using StructureMap;
 using VBin;
+using VBin.Manager;
 
 namespace CentralConfig
 {
@@ -24,7 +25,7 @@ namespace CentralConfig
         {
             m_environment = ObjectFactory.GetInstance<IEnvironment>();
             m_persistor = defaultPersistor ?? ObjectFactory.GetInstance<IConfigPersistor>();
-            m_assemblyResolver = ObjectFactory.GetInstance<IVBinAssemblyResolver>();
+            m_assemblyResolver = VBinManager.Resolver;
 
             m_appSettings = new ConfigAppSettings( this );
         }
