@@ -41,6 +41,10 @@
     <Reference Include="MongoDB.Driver">
       <HintPath>..\packages\mongocsharpdriver.1.8.2\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
+    <Reference Include="NDesk.Options, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\vbin.1.2.1\lib\net40\NDesk.Options.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
     </Reference>
@@ -52,17 +56,16 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="vbin, Version=1.1.2.31568, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="vbin, Version=1.1.3.16983, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\vbin.1.1.2.31568\lib\net40\vbin.exe</HintPath>
+      <HintPath>..\packages\vbin.1.2.1\lib\net40\vbin.exe</HintPath>
     </Reference>
-    <Reference Include="VBin.Manager, Version=1.1.2.31569, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\vbin.1.1.2.31568\lib\net40\VBin.Manager.dll</HintPath>
+    <Reference Include="VBin.AspNet">
+      <HintPath>..\packages\vbin.1.2.1\lib\net40\VBin.AspNet.dll</HintPath>
     </Reference>
-    <Reference Include="VBin.Uploader, Version=1.1.2.31569, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="VBin.Manager, Version=1.1.3.16983, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\vbin.1.1.2.31568\lib\net40\VBin.Uploader.exe</HintPath>
+      <HintPath>..\packages\vbin.1.2.1\lib\net40\VBin.Manager.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
