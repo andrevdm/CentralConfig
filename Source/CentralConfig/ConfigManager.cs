@@ -24,5 +24,13 @@
         {
             return g_settings.GetSection<TResult>( sectionName );
         }
+
+        public static IConfigPersistor Persistor
+        {
+            get
+            {
+                return g_settings.Persistor;
+            }
+        }
     }
 }

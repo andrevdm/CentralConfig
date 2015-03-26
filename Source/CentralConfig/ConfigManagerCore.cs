@@ -13,8 +13,16 @@ namespace CentralConfig
     {
         private readonly ConfigAppSettings m_appSettings;
         private readonly IEnvironment m_environment;
-        private readonly IConfigPersistor m_persistor;
         private readonly IVBinAssemblyResolver m_assemblyResolver;
+        private readonly IConfigPersistor m_defaultPersistor;
+
+        public IConfigPersistor Persistor
+        {
+            get
+            {
+                return m_defaultPersistor ?? ObjectFactory.GetInstance<IConfigPersistor>();
+            }
+        }
 
         public ConfigManagerCore()
             : this( null )
@@ -24,7 +32,7 @@ namespace CentralConfig
         public ConfigManagerCore( IConfigPersistor defaultPersistor )
         {
             m_environment = ObjectFactory.GetInstance<IEnvironment>();
-            m_persistor = defaultPersistor ?? ObjectFactory.GetInstance<IConfigPersistor>();
+            m_defaultPersistor = defaultPersistor;
             m_assemblyResolver = VBinManager.Resolver;
 
             m_appSettings = new ConfigAppSettings( this );
@@ -38,54 +46,54 @@ namespace CentralConfig
         public T GetSection<T>( string sectionName )
             where T : class
         {
-            var section = m_persistor.GetSection<T>( sectionName, m_environment.MachineName, m_assemblyResolver.CurrentVersion );
+            var section = Persistor.GetSection<T>( sectionName, m_environment.MachineName, m_assemblyResolver.CurrentVersion );
 
             if( section != null )
             {
                 return section;
             }
 
-            section = m_persistor.GetSection<T>( sectionName, m_environment.MachineName );
+            section = Persistor.GetSection<T>( sectionName, m_environment.MachineName );
 
             if( section != null )
             {
                 return section;
             }
 
-            section = m_persistor.GetSection<T>( sectionName, m_assemblyResolver.CurrentVersion );
+            section = Persistor.GetSection<T>( sectionName, m_assemblyResolver.CurrentVersion );
 
             if( section != null )
             {
                 return section;
             }
 
-            return m_persistor.GetSection<T>( sectionName );
+            return Persistor.GetSection<T>( sectionName );
         }
 
         private string ReadAppSetting( string key )
         {
-            var value = m_persistor.ReadAppSetting( key, m_environment.MachineName, m_assemblyResolver.CurrentVersion );
+            var value = Persistor.ReadAppSetting( key, m_environment.MachineName, m_assemblyResolver.CurrentVersion );
 
             if( value != null )
             {
                 return value;
             }
 
-            value = m_persistor.ReadAppSetting( key, m_environment.MachineName );
+            value = Persistor.ReadAppSetting( key, m_environment.MachineName );
 
             if( value != null )
             {
                 return value;
             }
 
-            value = m_persistor.ReadAppSetting( key, m_assemblyResolver.CurrentVersion );
+            value = Persistor.ReadAppSetting( key, m_assemblyResolver.CurrentVersion );
 
             if( value != null )
             {
                 return value;
             }
 
-            return m_persistor.ReadAppSetting( key );
+            return Persistor.ReadAppSetting( key );
         }
 
         public class ConfigAppSettings

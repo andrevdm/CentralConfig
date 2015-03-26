@@ -2,14 +2,14 @@
 <package >
     <metadata>
         <id>$id$</id>
-        <version>1.3.6</version>
+        <version>1.4.0</version>
         <title>$title$</title>
         <authors>Andre Van Der Merwe</authors>
         <owners>Andre Van Der Merwe</owners>
         <projectUrl>https://github.com/andrevdm/CentralConfig</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Replacement for System.ConfigurationManager to enable centralised configuration</description>
-        <releaseNotes>Updated vbin</releaseNotes>
+        <releaseNotes>Dont cache IConfigPersistor instance</releaseNotes>
         <copyright>Copyright 2013-2014</copyright>
         <tags>central config</tags>
     </metadata>
