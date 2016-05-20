@@ -1,20 +1,21 @@
 <?xml version="1.0"?>
 <package >
     <metadata>
-        <id>$id$</id>
-        <version>1.5.7</version>
-        <title>$title$</title>
+        <id>CentralConfig </id>
+        <version>1.6.2</version>
+        <title>CentralConfig </title>
         <authors>Andre Van Der Merwe</authors>
         <owners>Andre Van Der Merwe</owners>
         <projectUrl>https://github.com/andrevdm/CentralConfig</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Replacement for System.ConfigurationManager to enable centralised configuration</description>
-        <releaseNotes>nuget update</releaseNotes>
-        <copyright>Copyright 2013-2015</copyright>
+        <releaseNotes>Memoization</releaseNotes>
+        <copyright>Copyright 2013-2016</copyright>
         <tags>central config</tags>
     </metadata>
 
     <files>
         <file src="bin\Debug\CentralConfig.pdb" target="lib\net45" /> 
+        <file src="bin\Debug\CentralConfig.dll" target="lib\net45" /> 
     </files>      
 </package>
