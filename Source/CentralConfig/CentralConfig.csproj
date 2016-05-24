@@ -52,7 +52,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="NDesk.Options, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\vbin.1.7.1\lib\net45\NDesk.Options.dll</HintPath>
+      <HintPath>..\packages\VBin.1.7.2\lib\net45\NDesk.Options.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="StructureMap, Version=3.1.6.186, Culture=neutral, processorArchitecture=MSIL">
@@ -71,12 +71,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="vbin, Version=1.5.1.21243, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\vbin.1.7.1\lib\net45\vbin.exe</HintPath>
+    <Reference Include="vbin, Version=1.5.1.14976, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VBin.1.7.2\lib\net45\vbin.exe</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="VBin.Manager, Version=1.5.1.21244, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\vbin.1.7.1\lib\net45\VBin.Manager.dll</HintPath>
+    <Reference Include="VBin.Manager, Version=1.5.1.14976, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VBin.1.7.2\lib\net45\VBin.Manager.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
